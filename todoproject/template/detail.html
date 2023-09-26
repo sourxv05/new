@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block body %}
+
+
+          <div class="col-sm-6">
+              <h4>TASK TO BE COMPLETED</h4>
+
+            <div class="shadow card">
+              <div class="card-body">
+                <h5 class="card-title">{{t3.name }}</h5>
+                <p class="card-text">{{t3.priority}}</p>
+                  <p class="card-text">{{t3.date}}</p>
+                <a href="{% url 'deleteview' t3.id %}" class="btn btn-warning">DONE</a>
+                  <a href="{% url 'editview' t3.id %}" class="btn btn-primary">update</a>
+              </div>
+            </div>
+
+          </div>
+{% endblock %}
